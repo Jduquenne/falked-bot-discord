@@ -1,4 +1,4 @@
-import BotClient from './handler/Client.js';
+import FalkedDiscordBotClient from './handler/Client.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -6,7 +6,7 @@ dotenv.config();
 import commandHandler from './handler/Command.js';
 import eventHandler from './handler/Event.js';
 
-const client = new BotClient(process.env.TOKEN);
+const client = new FalkedDiscordBotClient(process.env.TOKEN);
 
 commandHandler(client);
 eventHandler(client);

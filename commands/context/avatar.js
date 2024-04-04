@@ -2,7 +2,7 @@ import { EmbedBuilder, ContextMenuCommandBuilder, ApplicationCommandType } from 
 
 export default {
 	data: new ContextMenuCommandBuilder()
-		.setName('Avatar')
+		.setName('avatar')
 		.setType(ApplicationCommandType.User)
 		.setDMPermission(false),
 	contextDescription: 'Fetches the avatar of a user.',

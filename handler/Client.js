@@ -3,7 +3,7 @@ import { Client, Collection, GatewayIntentBits, Partials } from 'discord.js';
 import Util from '../util/Util.js';
 import CustomBotMessage from '../util/CustomBotMessage.js';
 
-export default class extends Client {
+export default class FalkedDiscordBotClient extends Client {
 	constructor(...opt) {
 		super({
 			opt,
