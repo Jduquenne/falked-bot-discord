@@ -3,7 +3,7 @@ import { stripIndents } from 'common-tags';
 
 export default {
 	name: 'interactionCreate',
-	category: 'guild',
+	category: 'interaction',
 	enabled: true,
 	once: false,
 	run: async (interaction) => {

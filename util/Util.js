@@ -66,6 +66,15 @@ export default class Util {
 		return new Promise(res => setTimeout(res, ms));
 	}
 
+    sendRandomMessage(messages) {
+        if(messages) {
+            const randomIndex = Math.floor(Math.random() * messages.length)
+            return messages[randomIndex]
+        } else {
+            return "Aucun message trouvé"
+        }
+    }
+
 	async fetchChannel(channelID) {
 		return await this.client.channels.fetch(channelID).catch(() => false);
 	}

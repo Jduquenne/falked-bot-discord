@@ -5,6 +5,7 @@ export default async (client) => {
 		const events = fs.readdirSync(`./events/${category}/`).filter(evt => evt.endsWith('.js'));
 
 		for (const event of events) {
+			console.log(event)
 			const eventModule = await import(`../events/${category}/${event}`);
 			const e = eventModule.default;
 

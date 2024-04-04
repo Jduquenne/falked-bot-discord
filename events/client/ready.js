@@ -6,11 +6,11 @@ export default {
 	enabled: true,
 	once: true,
 	run: async (client) => {
-		client.user.setActivity('👋 Do his job of bot', { type: ActivityType.Custom });
+		client.user.setActivity('👋 Doing his job of bot', { type: ActivityType.Custom });
         client.channels.fetch('1225354017870315580')
-        .then(channel => {
-            channel.send(client.customBotMessage.messagesAleatoires());
-        })
+            .then(channel => {
+                channel.send(client.util.sendRandomMessage(client.customBotMessage.randomReadyBotMessages()));
+            })
 		console.log(`Discord Bot is now online with ${client.users.cache.size} users and ${client.guilds.cache.size} servers.`);
 	},
 };
