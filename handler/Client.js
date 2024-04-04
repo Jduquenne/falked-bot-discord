@@ -1,6 +1,7 @@
 import { Client, Collection, GatewayIntentBits, Partials } from 'discord.js';
 
 import Util from '../util/Util.js';
+import CustomBotMessage from '../util/CustomBotMessage.js';
 
 export default class extends Client {
 	constructor(...opt) {
@@ -34,6 +35,7 @@ export default class extends Client {
 		});
 
 		this.util = new Util(this);
+		this.customBotMessage = new CustomBotMessage(this)
 
 		this.commands = new Collection();
 		this.events = new Collection();
