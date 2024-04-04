@@ -2,10 +2,19 @@
   "name": "falked-bot-discord",
   "version": "0.0.1",
   "description": "Bot discord for Falked learning discord.js",
-  "main": "index.js",
+  "main": "bot.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --ext .js,.ts . . --fix",
+    "start": "node bot",
+    "deploy": "node deploy",
+    "deploy-g": "node deploy guild"
   },
   "author": "Falked",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "common-tags": "^1.8.2",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  }
 }
