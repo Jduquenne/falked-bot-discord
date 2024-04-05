@@ -19,7 +19,6 @@ const deploy = async () => {
 				if (command.endsWith('.js')) {
 					const cmdModule = await import(`./commands/${category}/${command}`);
 					const cmd = cmdModule.default;
-                    console.log(cmd)
 					const cmdData = cmd.data.toJSON();
 					commandData.push(cmdData);
 				}

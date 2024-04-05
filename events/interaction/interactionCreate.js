@@ -8,7 +8,6 @@ export default {
 	once: false,
 	run: async (interaction) => {
 		const client = interaction.client;
-
 		if (interaction.type === InteractionType.ApplicationCommand) {
 			const command = client.commands.get(interaction.commandName);
 
