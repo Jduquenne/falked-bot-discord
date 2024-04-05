@@ -22,7 +22,6 @@ export default {
 
 			const embed = new EmbedBuilder()
 				.setTitle(`**${member.user.username}${member.user.discriminator && member.user.discriminator !== '0' ? `#${member.user.discriminator}` : ''}**`)
-				.setColor(client.config.embedColor)
 				.setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
 				.addFields(
 					{
@@ -53,7 +52,7 @@ export default {
 			await interaction.reply({ embeds: [embed] });
 		}
 		catch (e) {
-			return await interaction.followUp({
+			return await interaction.reply({
 				content: stripIndents`
 				**An error occurred while running \`${interaction.commandName}\`**
 				
