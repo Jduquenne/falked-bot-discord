@@ -1,7 +1,7 @@
-import { ActivityType } from 'discord.js';
+import { ActivityType, Events } from 'discord.js';
 
 export default {
-	name: 'ready',
+	name: Events.ClientReady,
 	category: 'client',
 	enabled: true,
 	once: true,

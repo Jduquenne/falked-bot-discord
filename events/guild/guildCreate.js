@@ -1,5 +1,7 @@
+import { Events } from 'discord.js';
+
 export default {
-	name: 'guildCreate',
+	name: Events.GuildCreate,
 	category: 'guild',
 	enabled: true,
 	once: false,

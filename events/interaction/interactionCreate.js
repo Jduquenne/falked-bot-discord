@@ -1,8 +1,8 @@
-import { InteractionType } from 'discord.js';
+import { InteractionType, Events } from 'discord.js';
 import { stripIndents } from 'common-tags';
 
 export default {
-	name: 'interactionCreate',
+	name: Events.InteractionCreate,
 	category: 'interaction',
 	enabled: true,
 	once: false,

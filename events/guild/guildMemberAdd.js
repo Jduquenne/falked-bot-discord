@@ -1,5 +1,7 @@
+import { Events } from 'discord.js';
+
 export default {
-	name: 'guildMemberAdd',
+	name: Events.GuildMemberAdd,
 	category: 'guild',
 	enabled: true,
 	once: false,
